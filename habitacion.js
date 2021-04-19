@@ -4,6 +4,7 @@
 class Habitacion {
 	
 	constructor() {
+		const prompt = require('prompt');
 		const readline = require('readline');
 		const rl = readline.createInterface({
 			input: process.stdin,
@@ -11,7 +12,7 @@ class Habitacion {
 			prompt: '\n escribe algo'
 		});
 		rl.prompt();
-		rl.on('line',(line) => {
+		rl.on('rl',(line) => {
 			console.log(` es = '${line}'`);
 		}.on('close',() => {
 			console.log(`que tengas un buen dia`)

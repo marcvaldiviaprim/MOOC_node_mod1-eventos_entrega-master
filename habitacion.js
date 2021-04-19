@@ -4,6 +4,11 @@
 class Habitacion {
 	
 	constructor() {
+		const readline = require('readline');
+
+		rl.on('history', (history) => {
+			console.log(`Received: ${history}`);
+		  });
 
 		// Temperatura actual de la habitacion:
 		this.temperatura = 20.0;

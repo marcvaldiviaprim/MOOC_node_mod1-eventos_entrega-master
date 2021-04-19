@@ -5,10 +5,19 @@ class Habitacion {
 	
 	constructor() {
 		const readline = require('readline');
-
-		rl.on('history', (history) => {
-			console.log(`Received: ${history}`);
-		  });
+		const rl = readline.createInterface({
+			input: process.stdin,
+			output:process.stdout,
+			prompt: '\n escribe algo'
+		});
+		rl.prompt();
+		rl.on('line',(line) => {
+			console.log(` es = '${line}'`);
+		}.on('close',() => {
+			console.log(`que tengas un buen dia`)
+		});
+		
+		
 
 		// Temperatura actual de la habitacion:
 		this.temperatura = 20.0;

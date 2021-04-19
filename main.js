@@ -6,6 +6,7 @@ const Termostato = require('./termostato');
 const dormitorio = new Habitacion();
 dormitorio.temperatura = 22;
 
+
 // Creamos un climatizador para la habitacion:
 const climatizador = new Climatizador(dormitorio);
 
@@ -20,7 +21,7 @@ termostato.on('muchocalor', () => climatizador.enfriar());
 termostato.on('tic', (temp) => console.log(`${temp.toFixed(1)}ºC`));
 
 // Configurar la temp ideal a 20 grados:
-termostato.indicarTemperaturaIdeal(20);
+termostato.indicarTemperaturaIdeal(rl.Climatizador);
 
 // Encender el termostato:
 termostato.encender();
